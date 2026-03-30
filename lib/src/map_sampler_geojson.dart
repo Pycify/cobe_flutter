@@ -5,9 +5,11 @@ import 'package:flutter/services.dart';
 
 import 'cobe_models.dart';
 
+/// Samples land points by testing coordinates against bundled GeoJSON polygons.
 class GeoJsonMapSampler {
   GeoJsonMapSampler._();
 
+  /// Shared singleton instance.
   static final GeoJsonMapSampler instance = GeoJsonMapSampler._();
 
   final Map<int, Future<List<GlobePoint>>> _cache =
@@ -15,6 +17,7 @@ class GeoJsonMapSampler {
   List<_GeoPolygon>? _polygons;
   Future<List<_GeoPolygon>>? _polygonsFuture;
 
+  /// Returns cached land points for the requested number of [samples].
   Future<List<GlobePoint>> landPoints(int samples) {
     return _cache.putIfAbsent(samples, () async {
       final polygons = await _loadPolygons();

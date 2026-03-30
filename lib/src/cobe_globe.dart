@@ -9,10 +9,13 @@ import 'map_sampler.dart';
 import 'map_sampler_geojson.dart';
 import 'enum.dart';
 
+/// Builds a widget tree layered above the globe using projected scene data.
 typedef GlobeOverlayBuilder =
     Widget Function(BuildContext context, GlobeSceneData scene);
 
+/// An interactive widget that renders a COBE-style globe.
 class CobeGlobe extends StatefulWidget {
+  /// Creates a globe widget backed by a [controller].
   const CobeGlobe({
     super.key,
     required this.controller,
@@ -25,13 +28,28 @@ class CobeGlobe extends StatefulWidget {
     this.mapSamplerType = MapSamplerType.geoJsonMapSampler,
   });
 
+  /// Controller that owns the current globe options.
   final CobeController controller;
+
+  /// Strategy used to determine which sphere samples are land.
   final MapSamplerType mapSamplerType;
+
+  /// Optional builder for overlay widgets aligned to projected globe points.
   final GlobeOverlayBuilder? overlayBuilder;
+
+  /// Whether drag gestures rotate the globe.
   final bool draggable;
+
+  /// Whether the globe should animate horizontal rotation automatically.
   final bool autoRotate;
+
+  /// Horizontal rotation speed in radians per second while auto-rotating.
   final double autoRotateSpeed;
+
+  /// Horizontal drag-to-rotation sensitivity.
   final double dragSensitivity;
+
+  /// Vertical drag-to-tilt sensitivity.
   final double tiltSensitivity;
 
   @override

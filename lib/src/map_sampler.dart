@@ -5,9 +5,11 @@ import 'package:flutter/services.dart';
 
 import 'cobe_models.dart';
 
+/// Samples land points from the bundled texture map.
 class MapSampler {
   MapSampler._();
 
+  /// Shared singleton instance.
   static final MapSampler instance = MapSampler._();
 
   _TextureData? _textureData;
@@ -15,6 +17,7 @@ class MapSampler {
   final Map<int, Future<List<GlobePoint>>> _cache =
       <int, Future<List<GlobePoint>>>{};
 
+  /// Returns cached land points for the requested number of [samples].
   Future<List<GlobePoint>> landPoints(int samples) {
     return _cache.putIfAbsent(samples, () async {
       final texture = await _loadTexture();
