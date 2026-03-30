@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0
+## 1.0.0
 
 - Initial public release of `cobe_flutter`.
 - Added the `CobeGlobe` widget and `CobeController`.
