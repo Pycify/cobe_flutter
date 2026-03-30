@@ -1,9 +1,9 @@
 name: cobe_flutter
 description: A Flutter package that recreates the COBE globe with markers, arcs, and overlay projections.
-version: 0.1.0
-homepage: https://github.com/gabbygreat/cobe_flutter
-repository: https://github.com/gabbygreat/cobe_flutter
-issue_tracker: https://github.com/gabbygreat/cobe_flutter/issues
+version: 1.0.0
+homepage: https://github.com/Pycify/cobe_flutter
+repository: https://github.com/Pycify/cobe_flutter
+issue_tracker: https://github.com/Pycify/cobe_flutter/issues
 topics:
   - globe
   - maps
