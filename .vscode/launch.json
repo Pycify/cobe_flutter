@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "COBE Demo",
+      "request": "launch",
+      "type": "dart",
+      "program": "demo/lib/main.dart",
+      "deviceId": "chrome"
+    }
+  ]
+}

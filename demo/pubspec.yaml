@@ -1,0 +1,21 @@
+name: cobe_flutter_demo
+description: Compact COBE-style Flutter web demo.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+  flutter: ">=3.41.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cobe_flutter:
+    path: ../
+  http: ^1.2.2
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

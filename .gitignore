@@ -1,0 +1,14 @@
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+**/.dart_tool/
+**/build/
+**/.packages
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+.DS_Store
+
+# FVM Version Cache
+.fvm/

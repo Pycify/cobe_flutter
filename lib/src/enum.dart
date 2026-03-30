@@ -1,0 +1,1 @@
+enum MapSamplerType { imageMapSampler, geoJsonMapSampler }
